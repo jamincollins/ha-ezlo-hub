@@ -1,0 +1,50 @@
+name: New Device Type Request
+description: Request support for an Ezlo device type not yet handled
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        To add a new device type we need the Ezlo device type string and the
+        items it exposes. Enable DEBUG logging and look for log lines starting with
+        `Unsupported Ezlo device type` and `→ item`.
+  - type: input
+    id: device_type
+    attributes:
+      label: Ezlo device type string
+      placeholder: "e.g. binary_sensor.motion (from the INFO log line)"
+    validations:
+      required: true
+  - type: textarea
+    id: items
+    attributes:
+      label: Items exposed by the device
+      description: |
+        Paste the DEBUG log lines showing item names, valueTypes, and current values.
+        Example:
+          → item 'motion': valueType=bool, value=False
+          → item 'battery': valueType=int, value=92
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: ha_platform
+    attributes:
+      label: Desired Home Assistant platform
+      placeholder: "e.g. binary_sensor, climate, light"
+    validations:
+      required: false
+  - type: input
+    id: api_docs
+    attributes:
+      label: Link to Ezlo API docs (if available)
+      placeholder: "https://api.ezlo.com/..."
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      placeholder: Device make/model, Z-Wave command class, anything else useful.
+    validations:
+      required: false

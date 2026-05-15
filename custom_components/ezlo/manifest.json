@@ -1,0 +1,11 @@
+{
+  "domain": "ezlo",
+  "name": "Ezlo Hub",
+  "codeowners": ["@jamincollins"],
+  "config_flow": true,
+  "documentation": "https://github.com/jamincollins/ha-ezlo-hub",
+  "issue_tracker": "https://github.com/jamincollins/ha-ezlo-hub/issues",
+  "iot_class": "local_push",
+  "requirements": [],
+  "version": "0.1.0"
+}

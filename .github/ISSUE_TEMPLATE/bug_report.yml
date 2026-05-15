@@ -1,0 +1,58 @@
+name: Bug Report
+description: Something is not working correctly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing a bug, enable DEBUG logging and reproduce the issue:
+        ```yaml
+        logger:
+          logs:
+            custom_components.ezlo: debug
+        ```
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version
+      placeholder: "e.g. 2024.5.3"
+    validations:
+      required: true
+  - type: input
+    id: integration_version
+    attributes:
+      label: Integration version
+      placeholder: "e.g. 0.1.0 (shown in Settings → Devices & Services)"
+    validations:
+      required: true
+  - type: input
+    id: hub_firmware
+    attributes:
+      label: Hub firmware
+      placeholder: "e.g. 2.0.90.3265.5 (shown in hub.info.get or HA device page)"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      placeholder: What happened? What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Paste the full log snippet (INFO level minimum, DEBUG preferred).
+      render: text
+    validations:
+      required: true

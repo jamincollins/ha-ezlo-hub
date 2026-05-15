@@ -1,0 +1,23 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Ezlo Hub",
+        "description": "Enter the hub's local IP address and your Vera/Ezlo cloud credentials. The integration will discover the hub serial, then fetch a local access token from the cloud.",
+        "data": {
+          "host": "Hub IP Address",
+          "username": "Vera/Ezlo Cloud Username",
+          "password": "Vera/Ezlo Cloud Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot reach the hub at that IP. Verify it is powered on and reachable from this network.",
+      "invalid_auth": "Cloud authentication failed. Check your Vera/Ezlo username and password.",
+      "unknown": "Unexpected error communicating with the hub."
+    },
+    "abort": {
+      "already_configured": "This Ezlo hub is already configured."
+    }
+  }
+}

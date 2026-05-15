@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Test artefacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# Local development files — never commit these
+creds
+hub_state.json
+ha-config/
+com.vera.android_7.108.1.36.xapk
+get_hub_token.py
+/tmp/
+*_identity.json
+*_jwt.json
+*_auth_state.pkl
