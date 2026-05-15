@@ -4,8 +4,8 @@
   "codeowners": ["@jamincollins"],
   "config_flow": true,
   "documentation": "https://github.com/jamincollins/ha-ezlo-hub",
-  "issue_tracker": "https://github.com/jamincollins/ha-ezlo-hub/issues",
   "iot_class": "local_push",
+  "issue_tracker": "https://github.com/jamincollins/ha-ezlo-hub/issues",
   "requirements": [],
   "version": "0.1.0"
 }
